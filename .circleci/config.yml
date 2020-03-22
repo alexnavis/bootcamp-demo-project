@@ -52,4 +52,7 @@ jobs:
           path: ~/junit
 
       - store_artifacts:
-          path: ~/junit,build/libs/demo_project-0.0.1-SNAPSHOT.jar
+          path: ~/junit
+
+      - store_artifacts:
+          path: build/libs/demo_project-0.0.1-SNAPSHOT.jar
