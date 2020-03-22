@@ -4,13 +4,8 @@ import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
 
-import java.sql.Date;
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
+import java.util.Date;
 
 @Entity
 @Table(name = "project")
@@ -22,12 +17,17 @@ public class Project {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column
     private Integer id;
+
     @Column
     private String name;
+
     @Column
     private String sector;
+
     @Column
+    @Temporal(TemporalType.TIMESTAMP)
     private Date startDate;
+
     @Column
     private Boolean isActive;
 }
