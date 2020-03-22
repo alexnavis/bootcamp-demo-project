@@ -1,5 +1,6 @@
 package com.bootcamp.demo_project.repository;
 
+import com.bootcamp.demo_project.BaseTest;
 import com.bootcamp.demo_project.models.Project;
 import com.bootcamp.demo_project.utils.DateUtils;
 import org.junit.jupiter.api.Test;
@@ -12,7 +13,7 @@ import static org.assertj.core.api.Assertions.assertThat;
 
 
 @DataJpaTest
-class ProjectRepositoryTest {
+class ProjectRepositoryTest extends BaseTest {
 
     @Autowired
     ProjectRepository subject;
